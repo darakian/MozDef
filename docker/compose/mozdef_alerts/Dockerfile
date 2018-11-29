@@ -3,6 +3,7 @@ FROM mozdef/mozdef_base
 LABEL maintainer="mozdef@mozilla.com"
 
 COPY alerts /opt/mozdef/envs/mozdef/alerts
+COPY alerts/Alert_Schedule.json /opt/mozdef/envs/mozdef/alerts/lib/
 COPY docker/compose/mozdef_alerts/files/config.py /opt/mozdef/envs/mozdef/alerts/lib/
 
 RUN chown -R mozdef:mozdef /opt/mozdef/envs/mozdef/alerts
