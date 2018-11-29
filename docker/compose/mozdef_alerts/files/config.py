@@ -9,7 +9,9 @@ from celery.schedules import crontab, timedelta
 import time
 import logging
 
-ALERTS = {
+schedules = open("Alert_Schedule.json", "r") # Need to determin working dir and make sure file exists
+# Validate Schedules before using them
+ALERTS = { # Use ALERTS if reading schedules fails
     'bruteforce_ssh.AlertBruteforceSsh': {'schedule': crontab(minute='*/1')},
     'unauth_ssh.AlertUnauthSSH': {'schedule': crontab(minute='*/1')},
 }
