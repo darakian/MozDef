@@ -18,6 +18,7 @@ Table of Contents
   screenshots
   usage
   cloud_deployment
+  deployment
   advanced_settings
   code
   benchmarking
